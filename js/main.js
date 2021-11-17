@@ -52,7 +52,7 @@ class Human{
         this.age = age;
         this.haircolor = haircolor;
     }
-
+    // Use an arrow to create the printInfo method
     printInfo() {
         return `Name: ${this.name}\n Age: ${this.age}\n Haircolor: ${this.haircolor}`
 
@@ -61,6 +61,8 @@ class Human{
 
 let Timothy = new Human('Timothy', '45', 'Bluish Black');
 
+// Create another arrow function for the addAge method that takes a single parameter
+// Adding to the age
 function increaseAge(base, increase){
     const newAge = base + increase;
     console.log(`New Age: ${newAge}`)
@@ -70,7 +72,14 @@ function increaseAge(base, increase){
 console.log(Timothy.printInfo())
 
 
-// Use an arrow to create the printInfo method
+class Person4 extends Human{
+    constructor(name, age, haircolor){
+        super(name, age, haircolor)
+    }
+}
+
+let tommie = new Person4('Tommie', '48', 'Red');
+console.log(tommie.printInfo)
 
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
